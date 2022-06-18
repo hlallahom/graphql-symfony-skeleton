@@ -1,0 +1,5 @@
+.data
+logs
+logs/nginx/*
+.env.*
+.env

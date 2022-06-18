@@ -1,30 +1,55 @@
 {
-    "type": "project",
-    "license": "proprietary",
+    "type": "symfony5-graphql-skeleton",
+    "license": "Hamdi LALLAHOM<hamdi.lallahom@gmail.com>",
+    "minimum-stability": "beta",
+    "prefer-stable": true,
     "require": {
-        "php": "^7.1.3",
+        "php": ">=7.4.0",
         "ext-iconv": "*",
+        "ext-ctype": "*",
+        "composer/package-versions-deprecated": "1.11.99.1",
+        "doctrine/annotations": "^1.0",
+        "doctrine/doctrine-bundle": "^2.7",
+        "doctrine/doctrine-migrations-bundle": "^3.2",
+        "doctrine/orm": "^2.8",
+        "guzzlehttp/guzzle": "^7.4",
         "overblog/graphql-bundle": "^0.11.12",
-        "symfony/console": "^4.0",
-        "symfony/flex": "^1.0",
-        "symfony/form": "^4.0",
-        "symfony/framework-bundle": "^4.0",
-        "symfony/lts": "^4@dev",
-        "symfony/maker-bundle": "^1.11",
-        "symfony/orm-pack": "^1.0",
-        "symfony/yaml": "^4.0",
-        "symfony/serializer": "^4.0",
-        "guzzlehttp/guzzle": "^6.3"
+        "symfony/console": "5.4.*",
+        "symfony/asset": "5.4.*",
+        "symfony/dotenv": "5.4.*",
+        "symfony/flex": "^1.19",
+        "symfony/form": "5.4.*",
+        "symfony/framework-bundle": "5.4.*",
+        "symfony/maker-bundle": "^1.43",
+        "symfony/proxy-manager-bridge": "5.4.*",
+        "symfony/property-access": "5.4.*",
+        "symfony/property-info": "5.4.*",
+        "symfony/runtime": "5.4.*",
+        "symfony/serializer": "5.4.*",
+        "symfony/yaml": "5.4.*",
+        "symfony/security-bundle": "5.4.*",
+        "symfony/twig-bundle": "5.4.*",
+        "sensio/framework-extra-bundle": "^6.2",
+        "twig/extra-bundle": "^2.12|^3.0",
+        "twig/intl-extra": "^3.2",
+        "twig/string-extra": "^3.3",
+        "twig/twig": "^2.12|^3.0"
     },
     "require-dev": {
-        "overblog/graphiql-bundle": "^0.1.2",
-        "symfony/dotenv": "^4.0"
+        "overblog/graphiql-bundle": "^0.2",
+        "symfony/dotenv": "5.4.*"
     },
     "config": {
+        "optimize-autoloader": true,
         "preferred-install": {
             "*": "dist"
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "platform": {},
+        "allow-plugins": {
+            "symfony/flex": true,
+            "symfony/runtime": true
+        }
     },
     "autoload": {
         "psr-4": {
@@ -37,15 +62,14 @@
         }
     },
     "replace": {
+        "symfony/polyfill-ctype": "*",
         "symfony/polyfill-iconv": "*",
-        "symfony/polyfill-php71": "*",
-        "symfony/polyfill-php70": "*",
-        "symfony/polyfill-php56": "*"
+        "symfony/polyfill-php72": "*"
     },
     "scripts": {
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
-            "assets:install --symlink --relative %PUBLIC_DIR%": "symfony-cmd"
+            "assets:install %PUBLIC_DIR%": "symfony-cmd"
         },
         "post-install-cmd": [
             "@auto-scripts"
@@ -59,8 +83,8 @@
     },
     "extra": {
         "symfony": {
-            "id": "01C8QG502H571T1QZ0DGXA8R51",
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "5.4.*"
         }
     }
 }
