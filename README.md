@@ -11,7 +11,7 @@ I'll try to add some others fixtures :
  - Integrate phpmyadmin interface
  - Create graphql samples
  - Compiler pass use (Example : share content via linkedin, twitter, facebook, ...)
- - Makefile (To do)
+ - Makefile
  - TestUnit (To do)
 
 Prerequisites
