@@ -40,7 +40,7 @@ class PostsResolver implements ResolverInterface, AliasedInterface
      *
      * @return array
      */
-    public static function getAliases()
+    public static function getAliases(): array
     {
         return [
           'resolve' => 'Posts'

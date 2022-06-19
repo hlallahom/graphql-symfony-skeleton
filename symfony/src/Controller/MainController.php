@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class MainController extends AbstractController
 {
     /**
-     * @Route("/index")
+     * @Route("/")
      *
      */
     public function index(SocialNetworkInterface $socialNetwork, Request $request)
